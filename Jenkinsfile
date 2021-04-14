@@ -11,7 +11,7 @@ pipeline {
     stage('unzip') {
       steps {
         echo 'unzip'
-        unzip(zipFile: 'http://192.168.170.163:8080/var/jenkins_home/workspace/demo_master/multi_wallet_20181113.zip')
+        unzip '/var/jenkins_home/workspace/demo_master/multi_wallet_20181113.zip'
       }
     }
 
