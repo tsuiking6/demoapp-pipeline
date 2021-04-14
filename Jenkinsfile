@@ -1,41 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('Bulid') {
+    stage('download') {
       steps {
-        echo 'Build demo-app'
-        sh 'sh run_build_script.sh'
-      }
-    }
-
-    stage('Linux Tests Stage') {
-      parallel {
-        stage('Linux Tests Stage') {
-          steps {
-            echo 'Run Linux tests'
-            sh 'sh run_linux_tests.sh'
-          }
-        }
-
-        stage('Windows Tests Stage') {
-          steps {
-            echo 'Run Windows tests'
-          }
-        }
-
-      }
-    }
-
-    stage('Deploy Staging') {
-      steps {
-        echo 'Deploy to staging environment '
-        input 'Ok to deploy to production? '
-      }
-    }
-
-    stage('Deploy a Production') {
-      steps {
-        echo 'Deploy to Prod '
+        echo 'download'
+        sh 'curl --insecure sftp://sftp_flash:3VVeE0vL5eH3ZMykGm5h@192.168.10.15/data/abgintegration/20181113/multi_wallet_20181113.zip --output /var/jenkins_home/workspace/demo/multi_wallet_20181113.zip'
       }
     }
 
