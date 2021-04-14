@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('unzip') {
+      steps {
+        echo 'unzip'
+      }
+    }
+
   }
 }
