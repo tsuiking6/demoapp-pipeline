@@ -11,8 +11,11 @@ pipeline {
     stage('unzip') {
       steps {
         echo 'unzip'
+        sh '''steps {
+      unzip zipFile: \'multi_wallet_20181113.zip\', dir: \'/var/jenkins_home/workspace/demo_master/\'
+}'''
+        }
       }
-    }
 
+    }
   }
-}
