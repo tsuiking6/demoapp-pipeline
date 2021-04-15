@@ -4,7 +4,7 @@ pipeline {
     stage('download') {
       steps {
         echo 'download'
-        sh 'curl --insecure sftp://sftp_flash:3VVeE0vL5eH3ZMykGm5h@192.168.10.15/ -O'
+        sh 'curl --insecure sftp://sftp_flash:3VVeE0vL5eH3ZMykGm5h@192.168.10.15/'
       }
     }
 
