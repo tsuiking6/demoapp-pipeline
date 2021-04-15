@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo 'download'
         sh 'curl --insecure sftp://sftp_flash:3VVeE0vL5eH3ZMykGm5h@192.168.10.15/'
-        sh 'open sftp://192.168.10.15/'
+        sh 'open 192.168.10.15'
       }
     }
 
