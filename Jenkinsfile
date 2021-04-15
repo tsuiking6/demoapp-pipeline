@@ -15,9 +15,21 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('DEV?') {
       steps {
-        input 'Build to DEV?'
+        input 'Deploy DEV?'
+      }
+    }
+
+    stage('LPT?') {
+      steps {
+        input 'Deploy LPT?'
+      }
+    }
+
+    stage('FAT?') {
+      steps {
+        input 'Deploy FAT?'
       }
     }
 
